@@ -16,17 +16,9 @@
               Name:
              </div>
              <div class="col-md-5">
-                {{employee.name}}
+                <a [routerLink]="['/list',employee.id]">{{employee.name}}</a>
                </div>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                 Name:
-                </div>
-                <div class="col-md-5">
-                   {{employee.name}}
-                  </div>
-               </div>
                <div class="row">
                   <div class="col-md-3">
                       Gender:
@@ -55,4 +47,7 @@
       </div>
     <!-- </div> -->
   </div>
+</div>
+<div *ngIf="errorMessage">
+<h1>We have an error = {{errorMessage}}</h1>
 </div>
